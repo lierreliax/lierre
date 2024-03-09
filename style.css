@@ -1,0 +1,821 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+
+body{
+    font-family: 'Inter', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.navbar .container{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 1em 2em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+
+}
+
+.menu div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5em;
+
+}
+
+.menu-btn{
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    color: #fff;
+}
+
+.menu-btn{
+    display: none;
+}
+
+.navbar a, .menu-btn{
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover, .menu-btn:hover{
+    font-weight: 600;
+    color: #78B8FC;
+}
+
+.logo{
+    font-size: 1.5em;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.navbar{
+    margin: 0;
+}
+
+.comment-btn button{
+    font-weight: 600;
+    border-radius: 9px;
+    padding: 6px 20px;
+    background-color: #265B94; 
+    color: #fff; 
+    border: none; 
+    font-size: 16px; 
+    cursor: pointer; 
+    box-shadow: 2px 2px 5px rgb(83, 115, 164); 
+    transition: transform 0.3s, box-shadow 0.3s;
+    
+}
+
+footer{
+    background-color: #222 ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+section{
+    background-color: #252628;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* position: sticky;
+    top: 0; */
+}
+
+.card.sticky {
+    position: sticky;
+    top: 0;
+}
+
+section:nth-child(even){
+    background-color: rgb(244, 244, 244);
+
+}
+
+section:nth-child(8) {
+    height: 70vh;
+}
+
+
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+    gap: 4em;
+    
+}
+
+.home-img{
+    max-width: 500px;
+    width: 100%;
+
+}
+
+.lierre_quote{
+    display: flex;
+    max-width: 600px;
+    flex-direction: column;
+   
+    gap: 50px;
+    
+}
+
+.lierre_quote img{
+    transition:transform 0.3s ease-in-out;
+    max-width: 600px;
+    width: 100%;
+}
+
+.lierre_quote p{
+    font-size: 25px;
+    color: white;
+    padding: 0 1em 0 1em;
+    text-align: justify;
+}
+
+.about-container{
+    padding: 0 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4em;
+}
+
+.about-container img{
+    transition:transform 0.3s ease-in-out;;
+    max-width: 450px;
+    width: 100%;
+}
+
+
+.about-me h1 {
+    color: #252628;
+    justify-content: left;
+    font-weight: 800;
+    font-size: 5rem;
+}
+
+.about-me{
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    gap: 3rem;
+}
+
+.text p, .text h3{
+    padding: 0.8em;
+    background-color: white;
+    box-shadow: 3px 3px 3px 1px rgb(198, 198, 198);
+    border-radius: 5px;
+    text-align: justify;
+    max-width: 500px;
+    color: #252628;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.text p{
+    font-size: 1.4rem;
+    font-weight: 600;
+  
+}
+
+.text h3{
+    font-weight: 500;
+}
+
+.educ-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.educ-container h1 {
+    font-weight: 800;
+    font-size: 4rem;
+    color: #fff;
+
+}
+
+.graduate-container{
+    display: flex;
+    gap: 4em;
+}
+
+.graduate-img{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.graduate-img img{
+    max-width: 300px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.graduate-img .year {
+    margin-left: 1em;
+    font-weight: 600;
+    color: #fff; 
+    font-size: 1.4rem;
+}
+
+.graduate-img .school {
+    margin-left: 1em;
+    font-weight: 600;
+    color: #78B8FC; 
+    font-size: 1.4rem;
+}
+
+
+.current-educ-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+.current-educ-container h1 {
+    font-weight: 800;
+    font-size: 5rem;
+    color: #252628;
+    text-shadow: 2px 2px 2px white;
+    
+}
+
+.educ-content{
+    display: flex;
+    gap: 80px;
+}
+
+.educ-description p{
+    padding: 0.8em;
+    background-color: white;
+    box-shadow: 3px 3px 3px 1px rgb(198, 198, 198);
+    border-radius: 5px;
+    text-align: justify;
+    max-width: 500px;
+    color: #252628;
+    transition: transform 0.3s ease-in-out;
+}
+
+.current-educ-container img{
+    max-width: 340px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill-sec-container{
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+}
+
+.skill-sec-container h1{
+    margin-bottom: 2rem;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 5rem;
+}
+
+.text-box{
+    padding: 0px 20px;
+    margin-bottom: 20px;
+    background-color: #fff;
+    box-shadow: 1px 2px 2px 1px rgb(198, 198, 198);
+    border-radius: 5px;
+    width: 480px;
+    transition: transform 0.3s ease-in-out;
+}
+
+h6 {
+    margin: 10px 0 10px 10px;
+    color: black;
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 600;
+}
+
+.sub-container .note{
+    color: #fff;
+    margin: 20px 0 30px 10px ;
+    max-width: 480px;
+    font-size: 1.2rem;
+    text-align: justify;
+}
+
+.skills-container {
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 0 20px;
+
+}
+.row-container{
+    display: flex;
+    gap: 30px;
+
+}
+.sub-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+
+.box {
+    flex: 1;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 2px 2px 1px 1px #265b94ac;
+    border-radius: 8px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.box p {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.box i {
+    color: #265B94;
+    font-size: 2.5rem;
+}
+
+.box:hover, .box:hover i{
+    background-color: #78B8FC;
+    color: #252628;
+}
+
+.hobbies-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+}
+
+.hobbies-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+}
+
+.hobbies-content h1 {
+    font-weight: 800;
+    font-size: 5rem;
+    color: #fff;
+
+}
+
+.hobby {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 20px;
+    max-width: 600px;
+}
+
+.hobby-box {
+    padding: 10px 10px;
+    background-color:  #fff;
+    box-shadow: 2px 2px 4px #265b94a2;
+    box-shadow: 2px 2;
+    border-radius: 5px;
+    width: 230px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hobby-box p {
+    color: #252628;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.hobbies-description p{
+    color: #fff;
+    max-width: 490px;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.hobby-box:hover, .hobby-box:hover p {
+    background-color: #78B8FC;
+    border: #78B8FC;
+    color: #fff ;
+}
+
+.hobbies-container img {
+    max-width: 400px;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.pets-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 90px;
+
+}
+
+.pets-content h1{
+    margin: 0 0 10px 10px;
+    color: #252628;
+    justify-content: left;
+    font-weight: 800;
+    font-size: 5rem;
+    text-shadow: 4px 4px 3px gray;
+}
+
+.pets-description p{
+    padding: 0.8em;
+    background-color: white;
+    box-shadow: 3px 3px 3px 1px rgb(198, 198, 198);
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    text-align: justify;
+}
+
+.pets-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width:  400px;
+}
+
+.cats-container{
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 4em;
+}
+
+.cats-row{
+    margin-top: 10px;
+    display: flex;
+    gap: 2em;
+}
+
+.cats-container img{
+    max-width: 210px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-container{
+    display: flex;
+    gap: 150px;
+}
+
+.contact-description{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    justify-content: center;
+    gap: 10px;
+}
+
+.contact-description h1{
+    margin-bottom: 25px;
+    color: #252628;
+    justify-content: left;
+    font-weight: 800;
+    font-size: 4.5rem;
+}
+
+.contact-description p{
+    color: #252628;
+    max-width: 490px;
+    text-align: justify;
+    font-size: 1.2rem;
+}
+
+.accounts{
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-box {
+    flex: 1;
+    padding: 10px 20px;
+    background-color: #fff;
+    box-shadow: 2px 2px 1px 1px lightgrey;
+    border-radius: 8px;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.contact-box p {
+    color: #252628;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.contact-box i {
+    color: #265B94;
+    font-size: 2.5rem;
+}
+
+
+.contact-box:hover{
+    background-color: #265B94;
+}
+
+.contact-box:hover i, .contact-box:hover p{
+    color: #fff;
+}
+
+.box:hover, .box:hover i{
+    background-color: #78B8FC;
+    color: #252628;
+}
+
+
+.lierre_quote img:hover, .graduate-img img:hover,  .about-container img:hover, 
+.text p:hover, .text h3:hover, .box:hover, .hobby-box:hover,
+.hobbies-container img:hover, .cats-container img:hover, .educ-description p:hover, 
+.current-educ-container img:hover, .contact-box:hover{
+    transform: scale(1.1);
+}
+
+
+.highlight-blue{
+    color: #78B8FC;
+    font-weight: 600;
+}
+
+.highlight-dark-blue{
+    color: #265B94;
+    font-weight: 600;
+}
+
+footer{
+    padding: 3.5em;
+    color: #fff;
+}
+
+footer p{
+    margin-top: 1em;
+}
+
+.navbar{
+    background-color: #222;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9;
+}
+
+.year-school{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media screen and (min-width: 900px) {
+    .navbar .menu .logo{
+        margin: 0 1em;
+    }
+    
+    .container > .logo{
+        display: none;
+    }
+}
+
+
+@media screen and (max-width: 900px){
+    .home-container, .about-container, .hobbies-container, .contact-container, .row-container, 
+    .pets-container, .educ-content, .skill-sec-container{    
+        flex-direction: column;
+        padding: 0 50px;
+    }
+
+    .home-img, .lierre_quote img, .about-container img, .educ-content img{
+        width: 40%;
+    }
+
+    .lierre_quote p, .text p, .educ-description p, .box p, .box i, .hobby-box p, .hobbies-description p, .pets-description p, 
+    .contact-description p, .contact-box p, .text h3, .graduate-img .year, .graduate-img .school, h6, .sub-container .note{
+        font-size: 10px;
+    }
+
+    .hobbies-container{
+        gap: 1em;
+    }
+
+    .about-me h1 {
+        font-size: 2px;
+    }
+
+    .hobbies-container img{
+        width: 50%;
+    }
+
+    .hobbies-container img, .graduate-container img{
+        width: 150px;
+    }
+
+    .cats-row img {
+        max-width: 120px;
+    }
+
+    .about-me, .pets-container, .skill-sec-container, .skills-container, .contact-container, .hobbies-container, .hobbies-content, .hobby-box, .educ-content{
+       gap: 5px;
+    }
+
+    .about-container .text p{
+        font-size: 1rem;
+    }
+
+    .graduate-container{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2em;
+    }
+
+    .about-container h1, .contact-container h1, .current-educ-container h1, .educ-container h1, 
+    .pets-container h1, .hobbies-container h1, .skill-sec-container h1{
+        margin-top: 0.5em;
+        font-size: 3.5rem;
+        text-align: center;
+    }
+
+    .lierre_quote, .pets-content{
+        align-items: center;
+    }
+
+    .educ-content, .hobbies-content, .hobby{
+        align-items: center;
+        justify-content: center;
+    }
+
+    .lierre_quote p {
+        max-width: 450px;
+        font-size: 15px;
+    }
+
+    .menu-btn{
+        display: block;
+    }
+
+    .menu{
+        background: rgba(24, 24, 24, 0.8);
+        position: absolute;
+        top: 3.7em;
+        left: 0;
+        width: 100%;
+        height: 0;
+        padding: 0 2.5em;
+        transition: 0.5s ease-in-out;
+        overflow-y:scroll;
+    }
+    .menu, .menu div{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+
+    .menu a{
+        padding: 0.7em 0;
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .menu .logo{
+        display: none;
+    }
+
+    .menu-open{
+        height: 14em;
+        padding: 2.5em 2em;
+    }
+
+    @media  screen and (max-width: 500px){
+        html{
+            font-size: 12px;
+        }
+    }
+}
+
+@media screen and (max-height: 500px){
+    .card.sticky {
+        position: relative;
+    }
+
+    section{
+       height: 350vh;
+    }
+
+    .accounts{
+        flex-direction: row;
+    }
+    .contact-box{
+        width: 100px;
+        height: 25px;
+    }
+}
+
+@media screen and (max-width: 500px){
+    
+    .box{
+        width: 50px;
+    }
+
+    .text-box{
+        width: 300px;
+    }
+    .sub-container{
+        width: 200px;
+        gap: 1px;
+    }
+
+    html{
+        height: 160vh;
+    }
+
+    .card.sticky {
+        position: relative;
+    }
+
+}
+
+#comment-form-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 9999;
+}

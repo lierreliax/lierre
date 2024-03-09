@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Address Form</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+  <h2>Address Form</h2>
+  <form>
+    <div class="form-group">
+      <label for="lot_blk">Lot/Blk:</label>
+      <input type="text" class="form-control" id="lot_blk" name="lot_blk">
+    </div>
+    <div class="form-group">
+      <label for="street">Street:</label>
+      <input type="text" class="form-control" id="street" name="street">
+    </div>
+    <div class="form-group">
+      <label for="phase_subdivision">Phase/Subdivision:</label>
+      <input type="text" class="form-control" id="phase_subdivision" name="phase_subdivision">
+    </div>
+
+    <!-- Dropdowns populated using API -->
+    <div class="form-group">
+      <label for="province">Province:</label>
+      <select class="form-control" id="province" name="province"></select>
+    </div>
+    <div class="form-group">
+      <label for="city_municipality">City/Municipality:</label>
+      <select class="form-control" id="city_municipality" name="city_municipality" disabled></select>
+    </div>
+    <div class="form-group">
+      <label for="barangay">Barangay:</label>
+      <select class="form-control" id="barangay" name="barangay" disabled></select>
+    </div>
+    <div class="form-group">
+      <label for="country">Country:</label>
+      <select class="form-control" id="country" name="country" disabled></select>
+    </div>
+    <div class="form-group">
+      <label for="contact_number">Contact Number:</label>
+      <input type="text" class="form-control" id="contact_number" name="contact_number">
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
+
+<!-- Bootstrap and jQuery Scripts -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<!-- JavaScript for API Calls and Populating Dropdowns -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const apiUrl = "https://psgc.gitlab.io/api/";
+
+    function populateDropdown(url, selectElement) {
+      fetch(url)
+        .then(response => {
+          if (!response.ok) {
+            throw new Error(`Failed to fetch ${selectElement.id}`);
+          }
+          return response.json();
+        })
+        .then(data => {
+          data.forEach(item => {
+            const option = document.createElement('option');
+            option.value = item.code;
+            option.textContent = item.name;
+            selectElement.appendChild(option);
+          });
+          selectElement.disabled = false;
+        })
+        .catch(error => console.error(`Error loading ${selectElement.id}:`, error.message));
+    }
+
+    populateDropdown(apiUrl + "provinces/", document.getElementById('province'));
+
+    document.getElementById('province').addEventListener('change', function() {
+      const cityMunicipalitySelect = document.getElementById('city_municipality');
+      cityMunicipalitySelect.innerHTML = '<option value="" disabled selected>Select City/Municipality</option>';
+      const barangaySelect = document.getElementById('barangay');
+      barangaySelect.innerHTML = '<option value="" disabled selected>Select Barangay</option>';
+
+      const selectedProvince = this.value;
+      populateDropdown(apiUrl + "provinces/" + selectedProvince + "/cities/", cityMunicipalitySelect);
+    });
+
+    document.getElementById('city_municipality').addEventListener('change', function() {
+      const barangaySelect = document.getElementById('barangay');
+      barangaySelect.innerHTML = '<option value="" disabled selected>Select Barangay</option>';
+
+      const selectedCity = this.value;
+      populateDropdown(apiUrl + "cities/" + selectedCity + "/barangays/", barangaySelect);
+    });
+
+    populateDropdown(apiUrl + "countries", document.getElementById('country'));
+  });
+</script>
+
+</body>
+</html>
